@@ -54,7 +54,7 @@ nav ul li a{
 
 nav ul li a::after{
     content: '';
-    width: 100%;
+    width: 0;
     height: 3px;
     background: #ff004f;
     position: absolute;
@@ -101,11 +101,13 @@ nav ul li a:hover::after{
 .about-col-1 img{
     width:100%;
     border-radius:15px;
+    height: 80%;
+    height: 100%;
 }
 
 .about-col-2{
     flex-basis: 60%;
-
+    padding-top: 100px;
 }
 
 .sub-title{
@@ -156,7 +158,7 @@ nav ul li a:hover::after{
     display: none;
 }
 
-.tab-contents active-tab{
+.tab-contents.active-tab{
     display: block;
 }
 
@@ -210,10 +212,10 @@ nav ul li a:hover::after{
     padding:50px 0;
 }
 
-.worklist{
+.work-list{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 40px;
+    grid-template-columns: 1fr;
+    grid-gap: 24px;
     margin-top: 50px;
 }
 
@@ -221,32 +223,36 @@ nav ul li a:hover::after{
     border-radius: 10px;
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: row-reverse;
+    max-height: 660px;
 }
 
 .work img{
-    width: 100%;
-    border-radius: 10px;
+    width: 50%;
+    border-radius: 0 10px 10px 0;
     display: block;
+    object-fit: cover;
     transition: transform 0.5s;
+    max-height: 660px;
 }
 
 .layer{
-    width: 100%;
-    height: 0;
+    width: 50%;
+    height: auto;
     background: linear-gradient(rgba(0,0,0,0.6), #ff004f);
-    border-radius: 10px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    overflow: hidden;
+    border-radius: 10px 0 0 10px;
+    overflow: visible;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     padding: 0 40px;
-    text-align: center;
+    text-align: left;
     font-size: 15px;
-    transition: height 0.5s;
+    opacity: 0;
+    transform: translateX(-12px);
+    transition: opacity 0.5s, transform 0.5s;
 
 }
 
@@ -273,13 +279,14 @@ nav ul li a:hover::after{
 }
 
 .work:hover .layer{
-    height: 100px;
+    opacity: 1;
+    transform: translateX(0);
 
 }
 
 .btn{
     display: block;
-    margin: 50 px auto;
+    margin: 50px auto;
     width: fit-content;
     border: 1px solid #ff004f;
     padding: 14px 50px;
@@ -304,6 +311,15 @@ nav ul li a:hover::after{
 
 .contact-left p{
     margin-top: 30px;
+}
+
+.contact-left p a,
+.contact-left p a:visited,
+.contact-left p a:hover,
+.contact-left p a:active{
+    color: inherit;
+    text-decoration: none;
+    font: inherit;
 }
 
 .contact-left p i{
@@ -351,7 +367,7 @@ form input, form textarea{
     border-radius: 6px;
 }
 
-form btn2{
+form .btn2{
     padding: 14px 60px;
     font-size: 18px;
     margin-top: 20px;
@@ -416,7 +432,7 @@ nav .fas{
     .sub-title{
         font-size: 40px;
     }
-    .about-col-1, about-col-2{
+    .about-col-1, .about-col-2{
         flex-basis: 100%;
     }
     .about-col-1{
@@ -428,6 +444,20 @@ nav .fas{
     .tab-links{
           font-size: 16px;
           margin-right: 20px;
+    }
+    .work{
+        flex-direction: column;
+    }
+    .work img,
+    .layer{
+        width: 100%;
+        border-radius: 10px;
+    }
+    .layer{
+        min-height: 180px;
+        opacity: 1;
+        transform: none;
+        padding: 24px;
     }
     .contact-left, .contact-right{
         flex-basis: 100%;

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="" IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Website</title>
     <link rel="stylesheet" href="style.css">
@@ -25,7 +25,6 @@
                 <i class="fas fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
-                <p>UI/UX Designer </p>
                 <h1>Hi , I am <span>Aishka</span><br></h1>
             </div>
         </div>
@@ -35,7 +34,7 @@
         <div class="container">
             <div class="row">
                 <div class="about-col-1 ">
-                    <img src="images/bgb.png">
+                    <img src="images/pf.png">
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
@@ -52,29 +51,31 @@
                     </p>
 
                     <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links active-link" onclick="opentab(event, 'skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab(event, 'experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab(event, 'education')">Education</p>
                     </div>
                     <div class="tab-contents active-tab" id="skills">
                         <ul> 
-                            <li><span> UI/UX</span><br> Designing Web/ App Interfaces</li>
-                            <li><span> Web Development</span><br> Web App Development</li>
-                            <li><span> App Development</span><br> Building Andriod/iOS apps</li>
+                            <li><span> Software Development</span><br> HTML, CSS, Javascript, Responsive Web Design</li>
+                            <li><span> Database</span><br> SQL, MongoDB</li>
+                            <li><span> Data Analysis</span><br> Numpy, Pandas, Seaborn, Matplotlib </li>
                         </ul>
                     </div>
                     <div class="tab-contents" id="experience">
                         <ul>
-                            <li><span> 2021-Current</span><br> UI/UX design training</li>
-                            <li><span> 2019-2021</span><br> Teamlead</li>
-                            <li><span> 2017-2019</span><br> Executive</li>
+                            <li><span> Sept 2024- Nov 2024 </span><br><b>Teaching Assistant</b></li>
+                            <ul> 
+                                <li> Designed and developed Python coding examples to clarify complex examples.</li>
+                                <li> Collaborated with course professor to identify learning gaps in Python Programming course.</li>
+                            </ul>
                         </ul>
                     </div>
                     <div class="tab-contents" id="education">
                         <ul>
-                            <li><span> UI/UX</span><br> Designing Web/ App Interfaces</li>
-                            <li><span> Web Development</span><br> Web App Development</li>
-                            <li><span> App Development</span><br> Building Andriod/iOS apps</li>
+                            <li><span> Concordia University of Edmonton</span><br>
+                                <b> Bachelor of Science in Information Technology</b><br> Jan 2022- Dec 2026</li>
+                        
                         </ul>
                     </div>
                 </div>
@@ -85,25 +86,29 @@
     <!-------Services-->
     <div id="services">
         <div class="container">
-            <h1 class="sub-title">My Services</h1>
+            <h1 class="sub-title">Core Competencies</h1>
             <div class="services-list">
                 <div>
                     <i class="fa-solid fa-code"></i>
-                    <h2>Web Design</h2>
+                    <h2>Software Development</h2>
                     <p> </p>
-                    <a href="#">learn more</a>
+
                 </div>
                 <div>
-                    <i class="fa-solid fa-crop"></i>
-                    <h2> UI/UX Design</h2>
+                    <i class="fa-solid fa-arrow-trend-up"></i>
+                    <h2> Data Analysis</h2>
                     <p> </p>
-                    <a href="#">learn more</a>
+                    
                 </div>
                 <div>
-                    <i class="fa-brands fa-app-store"></i>
-                    <h2>App Design</h2>
+                    <i class="fa-solid fa-pen-fancy"></i>
+                    <h2>Data Visualization and Reporting</h2>
                     <p> </p>
-                    <a href="#">learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-table-cells"></i>
+                    <h2>Backend Development</h2>
+                    <p> </p>
                 </div>
             </div>
         </div>
@@ -114,37 +119,19 @@
             <h1 class="sub-title"> My Work</h1>
             <div class="work-list">
                 <div class="work">
-                    <img src="">
+                    <img src="images/girlll.png">
                     <div class="layer">
-                        <h3> Social Media App</h3>
-                        <p>The app connects you to the talented people around the world.
-                            Download it from playstore.
-                        </p>
-                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                        <ul><h3> Portfolio Website</h3>
+                        <li>Designed a personal portfolio website to showcase skills and professional experience using HTML, CSS, and JavaScript.</li>
+                        <li>Implemented responsive design principles to ensure optimal viewing across various devices and screen sizes.</li>
+                        <li> Integrated interactive elements and smooth navigation to improve user experience.</li>
+                        <li> Optimized website layout for clarity, accessibility, and professional presentation.</li>
+                        </ul>
                     </div>
-                </div>
-                <div class="work">
-                    <img src="">
-                    <div class="layer">
-                        <h3> Music App</h3>
-                        <p>The app connects you to the talented people around the world.
-                            Download it from playstore.
-                        </p>
-                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="">
-                    <div class="layer">
-                        <h3> Online Shopping App</h3>
-                        <p>The app connects you to the talented people around the world.
-                            Download it from playstore.
-                        </p>
                         <a href="#"><i class="fas fa-external-link-alt"></i></a>
                     </div>
                 </div>
             </div>
-            <a href="#" class="btn"> See More</a>
         </div>
     </div>
 
@@ -154,24 +141,24 @@
             <div class="row">
                 <div class="contact-left">
                     <h1 class="sub-title">Contact me</h1>
-                    <p><i class="fas fa-paper-plane"></i> aishka.bmp@gmail.com</p>
+                    <p><i class="fas fa-paper-plane"></i><a href="https://mail.google.com/mail/?view=cm&fs=1&to=aishka.bmp@gmail.com" target="_blank" rel="noopener noreferrer">Email Me</a></p>
                     <div class="social-icons">
-                        <a href=""><i class="fab fa-linkedin"></i></a>
+                        <p><i class="fab fa-linkedin"></i><a href="https://www.linkedin.com/in/aishka-prajapati-608275333/"><element style= "font-size:medium "> Aishka Prajapati</element></a></p>
                     </div>
+                    <a href="images/Resume_Aishka.pdf" download class="btn btn2">Download CV</a>
                 </div>
-                <a href="" download class="btn btn2">Download CV</a>
-            </div>
-            <div class="contact-right">
-                <form>
-                    <input type="text" name="Name" placeholder="Your name" required>
-                    <input type="email" name="email" placeholder="Your email" required>
-                    <textarea name="Message" rows="6" placeholder="Your message"></textarea>
-                    <button type="submit" class="btn btn2">Submit</button>
-                </form>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your name" required>
+                        <input type="email" name="email" placeholder="Your email" required>
+                        <textarea name="Message" rows="6" placeholder="Your message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
             </div>
         </div>
         <div class="copyright">
-            <p> Copyright &nbsp; Aishka. Made with Easy Tutorials</p>
+            <p> Copyright &copy; Aishka Prajapati. Made with HTML, CSS, JavaScript</p>
         </div>
     </div>
     
@@ -179,14 +166,14 @@
         var tablinks = document.getElementsByClassName("tab-links");
         var tabcontents=document.getElementsByClassName("tab-contents");
 
-        function opentab(tabname){
+        function opentab(event, tabname){
             for(tablink of tablinks){
                 tablink.classList.remove("active-link");
             }
             for(tabcontent of tabcontents){
                 tabcontent.classList.remove("active-tab");
             }
-            element.currentTarget.classList.add("active-link");
+            event.currentTarget.classList.add("active-link");
             document.getElementById(tabname).classList.add("active-tab");
         }
     </script>
